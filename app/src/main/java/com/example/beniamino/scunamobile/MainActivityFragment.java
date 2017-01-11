@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.beniamino.scunamobile.Util.DTO;
-import com.example.beniamino.scunamobile.Util.DTOMaker;
 
 import java.io.IOException;
 
