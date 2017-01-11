@@ -35,5 +35,6 @@ dependencies {
     compile 'com.android.support:design:25.1.0'
     testCompile 'junit:junit:4.12'
     compile files('src/lib/DTO.jar')
+    compile files('src/libs/DataTrasferObject.jar')
 }
 

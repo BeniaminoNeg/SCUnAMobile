@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
+import org.dto.DTO;
+
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -19,7 +21,6 @@ import java.net.Socket;
 
 import ClientConnectionTest.Fondation.TecnicalService.ConcreteRemoteService;
 import ClientConnectionTest.Fondation.TecnicalService.IComRemoteService;
-import Util.DTO;
 import Util.DTOMaker;
 
 import static java.security.AccessController.getContext;
