@@ -1,8 +1,12 @@
 package ClientConnectionTest.Fondation.TecnicalService;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.StrictMode;
+
+import com.example.beniamino.scunamobile.StanzeActivity;
 
 import java.io.EOFException;
 import java.io.IOException;
@@ -12,6 +16,8 @@ import java.net.Socket;
 
 import Util.DTO;
 import Util.DTOMaker;
+
+import static java.security.AccessController.getContext;
 
 
 /**
@@ -74,5 +80,14 @@ public class ConcreteRemoteService extends AsyncTask<String, Void, Object> imple
 
         return taskobject;
         //diewaufauyfuayqrfquyebueywueybehf
+    }
+
+    @Override
+    protected void onPostExecute(Object o) {
+        DTO dto = (DTO) o;
+        if (dto.getFunzione().equals("Ping")){
+            //Siamo okay, cambiamo la view
+            //Intent intent = new Intent(getContext(), StanzeActivity.class);
+        }
     }
 }
