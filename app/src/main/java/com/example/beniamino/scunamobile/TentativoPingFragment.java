@@ -22,6 +22,7 @@ import java.net.Socket;
 import ClientConnectionTest.Fondation.TecnicalService.ConcreteRemoteService;
 import ClientConnectionTest.Fondation.TecnicalService.IComRemoteService;
 import Util.DTOMaker;
+import Util.DatiServer;
 
 import static java.security.AccessController.getContext;
 
@@ -65,11 +66,11 @@ public class TentativoPingFragment extends Fragment {
 
     private void Aggiungi() throws IOException {
         String nome = Nome.getText().toString();
-        String indirizzoIP = Indirizzo.getText().toString();
-        String porta = Porta.getText().toString();
+        DatiServer.getInstance().setIndirizzoIP(Indirizzo.getText().toString());
+        DatiServer.getInstance().setPorta(Integer.parseInt(Porta.getText().toString()));
 
         System.out.println("Sono quìììì");
-        new ConcreteRemoteService().execute("Ping",indirizzoIP,porta);
+        new ConcreteRemoteService().execute("Ping",DatiServer.getInstance().getIndirizzoIP(),DatiServer.getInstance().getPorta().toString());
         //ConcreteRemoteService.getSingletonInstance().RichiediAlServer(DTOMaker.getSingletonInstance().getPingDTO(),indirizzoIP,Integer.parseInt(porta));
 
 
